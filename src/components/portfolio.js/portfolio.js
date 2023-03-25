@@ -110,7 +110,7 @@ export default function PortfolioPage() {
           </About>
 
           <Links>
-            <Link href="#">Projects</Link>
+            <Link href="/projects">Projects</Link>
             <Link href="https://www.linkedin.com/in/tuncer-altun-566b1a1a3/">
               LinkedIn
             </Link>

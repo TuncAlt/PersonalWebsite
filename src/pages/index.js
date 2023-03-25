@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import PortfolioPage from "./portfolio.js/portfolio";
+import PortfolioPage from "@/components/portfolio.js/portfolio";
 
 const inter = Inter({ subsets: ["latin"] });
 
