@@ -1,4 +1,3 @@
-import { Bungee } from "next/font/google";
 import React from "react";
 import styled from "styled-components";
 
@@ -93,7 +92,7 @@ export default function Projects() {
       <Title>My Projects</Title>
       <Content>
         <Description>
-          <About>Here are some of the projects I've worked on:</About>
+          <About>Here are some of the projects I have worked on:</About>
           <About>
             <Link href="https://capstone-project-six-eosin.vercel.app/">
               Temperature Logger
