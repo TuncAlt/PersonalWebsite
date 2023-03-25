@@ -50,6 +50,7 @@ const About = styled.p`
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #ffffff;
 `;
 
 const Links = styled.div`
