@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import React from "react";
 import styled from "styled-components";
 
@@ -66,6 +67,27 @@ const Link = styled.a`
   color: #ff00ff;
   text-shadow: 2px 2px #00ffff, 4px 4px #ff00ff;
   margin: 0 1vw;
+  &:hover {
+    animation: shake 0.5s ease-in-out;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px) rotate(-3deg);
+    }
+    50% {
+      transform: translateX(0) rotate(3deg);
+    }
+    75% {
+      transform: translateX(5px) rotate(-3deg);
+    }
+    100% {
+      transform: translateX(0) rotate(0);
+    }
+  }
 `;
 
 const FooterContainer = styled.footer`
@@ -85,12 +107,54 @@ const Copyright = styled.p`
   font-size: 2vw;
   margin: 0;
 `;
+const Backbutton = styled.button`
+  font-family: Bungee;
+  font-size: 3vw;
+  font-weight: normal;
+  color: #ffffff;
+  text-shadow: 2px 2px #00ffff, 4px 4px #ff00ff;
+  position: fixed;
+  bottom: 5rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    animation: shake 0.5s ease-in-out;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px) rotate(-3deg);
+    }
+    50% {
+      transform: translateX(0) rotate(3deg);
+    }
+    75% {
+      transform: translateX(5px) rotate(-3deg);
+    }
+    100% {
+      transform: translateX(0) rotate(0);
+    }
+  }
+`;
 
 export default function Projects() {
+  const router = useRouter();
   return (
     <Container>
       <Title>My Projects</Title>
       <Content>
+        <Backbutton onClick={() => router.push("/")}> Back</Backbutton>
+
         <Description>
           <About>Here are some of the projects I have worked on:</About>
           <About>
